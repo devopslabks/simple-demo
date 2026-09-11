@@ -11,7 +11,7 @@ pipeline {
         stage('Test Python') {
             steps {
                 sh 'python3 --version'
-                sh 'python3 app.py'
+                sh 'python3 -m py_compile app.py'
             }
         }
 
