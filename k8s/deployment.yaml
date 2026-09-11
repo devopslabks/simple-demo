@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-demo
+  template:
+    metadata:
+      labels:
+        app: simple-demo
+    spec:
+      containers:
+        - name: simple-demo
+          image: simple-demo:2.0
+          imagePullPolicy: Never
+
+
