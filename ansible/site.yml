@@ -1,0 +1,14 @@
+---
+- name: Simple Demo Ansible Project
+  hosts: local
+  become: false
+
+  tasks:
+    - name: Create Ansible test file
+      file:
+        path: /tmp/simple-demo-ansible.txt
+        state: file
+
+
+
+
